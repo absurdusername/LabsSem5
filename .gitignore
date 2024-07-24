@@ -1,0 +1,20 @@
+# ignore everything
+*
+
+# directories
+!*/
+
+# repo
+!*.md
+!.gitignore
+
+# C
+!*.c
+!*.h
+
+# Python
+!*.py
+!*.ipynb
+
+# SQL
+!*.sql
