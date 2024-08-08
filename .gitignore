@@ -18,6 +18,3 @@
 
 # SQL
 !*.sql
-
-# PDFs
-!*.pdf
