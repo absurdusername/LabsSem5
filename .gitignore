@@ -8,13 +8,12 @@
 !*.md
 !.gitignore
 
-# C
-!*.c
-!*.h
-
 # Python
 !*.py
 !*.ipynb
 
-# SQL
-!*.sql
+# data
+!*.txt
+!*.pdf
+
+/.venv/
