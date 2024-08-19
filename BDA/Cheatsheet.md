@@ -28,8 +28,12 @@ Showing columns
 from pyspark.sql.functions import upper
 
 df.where(df.x == 1).show() # shows matching rows, where() aliases filter()
+df.where('x = 1').show() # SQL conditionals are allowed
+
 df.select(upper(df.s)).show() # select upper(s) from df
 df.withColumn("upper_s", upper(df.s)).show() # returns df + upper(s)
+
+fruits.groupBy(fruits.color).count().show()
 ```
 
 UDFs
@@ -47,4 +51,13 @@ Reading and writing DataFrames
 ```python
 df.write.csv('foo.csv', header=True)
 spark.read.csv('foo.csv', header=True).show()
+```
+
+SQL
+```python
+df.createOrReplaceTempView("foo_table")
+spark.sql('''
+    select count(*) 
+    from foo_table
+''')
 ```
