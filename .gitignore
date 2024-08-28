@@ -5,15 +5,14 @@
 !*/
 
 # repo
-!*.md
 !.gitignore
 
 # Python
 !*.py
 !*.ipynb
 
-# data
-!*.txt
+# documents
+!*.md
 !*.pdf
 
 /.venv/
