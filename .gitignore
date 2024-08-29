@@ -1,18 +1,17 @@
+# reference: https://git-scm.com/docs/gitignore/en
+
 # ignore everything
 *
+# except...
 
-# directories
-!*/
-
-# repo
-!.gitignore
+# directories starting with a letter
+![a-zA-Z]*/
 
 # Python
 !*.py
 !*.ipynb
 
-# documents
+# other files
+!.gitignore
 !*.md
 !*.pdf
-
-/.venv/
