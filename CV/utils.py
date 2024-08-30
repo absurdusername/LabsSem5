@@ -29,14 +29,14 @@ def plot_images(*args):
     pairs = _parse_image_title_pairs(args)
 
     fig, axes = plt.subplots(ncols=len(pairs))
-    for ax in axes.flat:
-        ax.axis('off')
     
     for i, (image, title) in enumerate(pairs):
         ax = axes[i] if len(pairs) > 1 else axes
+        ax.axis('off')
+
         ax.imshow(image, cmap='grey')
         ax.set_title(title)
-    
+        
     plt.show()
 
 
