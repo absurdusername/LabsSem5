@@ -32,9 +32,8 @@ def plot_images(*args, ncols=-1):
     plt.show()
 
 
-def display_images(title, *images):
-    vis = np.concat(images, axis=1)
-    cv2.imshow(title, vis)
+def display_image(title, image):
+    cv2.imshow(title, image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
     cv2.waitKey(1)
