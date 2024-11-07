@@ -15,3 +15,6 @@
 !.gitignore
 !*.md
 !*.pdf
+
+# data files
+!*.csv
