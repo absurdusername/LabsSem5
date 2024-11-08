@@ -40,6 +40,8 @@ df.withColumn("upper_s", upper(df.s)).show() # returns df + upper(s)
 df.withColumn("x squared", pow(df.x, 2)).show()
 
 fruits.groupBy(fruits.color).count().show()
+
+df.drop(*colnames)
 ```
 
 UDFs
@@ -67,3 +69,13 @@ spark.sql('''
     from foo_table
 ''')
 ```
+
+Handling categorical data (Strings)
+```python
+indexer = StringIndexer(inputCol='fruit', outputCol='fruit_index')
+df = indexer.fit(df).transform(df)
+```
+
+Should the need arise to handle numeric categorical data
+
+`StringIndexer -> VectorAssembler -> VectorIndexer`
