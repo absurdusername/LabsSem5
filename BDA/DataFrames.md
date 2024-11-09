@@ -72,7 +72,7 @@ spark.sql('''
 
 Handling categorical data (Strings)
 ```python
-indexer = StringIndexer(inputCol='fruit', outputCol='fruit_index')
+indexer = StringIndexer(inputCols=['A0', 'B0'], outputCol=['A1', 'B1']
 df = indexer.fit(df).transform(df)
 ```
 
